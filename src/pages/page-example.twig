@@ -4,14 +4,84 @@
 {% set jsCmps = [] %}
 {% set jsLibs = [] %}
 
+{% set navList = [
+  {
+    text: 'Портфолио',
+    href: '#'
+  },
+  {
+     text: 'О компании',
+     href: '#'
+  },
+  {
+     text: 'Контакты',
+     href: '#'
+  },
+] %}
+
 {% block content %}
-  
-<div class="container">
-  <div class="row">
-    <div class="col-fluid">
-      <h1>Hi there!</h1>
-    </div>
-  </div>  
-</div>
+
+	<header class="header">
+		<div class="container">
+			<div class="header__logo logo">
+				<a href="/">
+					{% include '/components/images/images.twig' with 
+    {
+      src:   'logo-eezeepeezee--eng',
+      type:  'svg',
+      class: 'logo__img logo__img--en',
+      alt:   'Logotype Eezeepeezy'
+    }
+          %}
+					{% include '/components/images/images.twig' with 
+    {
+      src:   'logo-eezeepeezee--rus',
+      type:  'svg',
+      class: 'logo__img logo__img--ru',
+      alt:   'Логотип Изипизи'
+    }
+          %}
+				</a>
+			</div>
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					{% for item in navList %}
+						<li class="main-nav__item">
+							<a href="{{item.href|default('#')}}">{{item.text}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="container">
+		{% include '/components/images/images.twig' with 
+    {
+      src:   'lemons',
+      type:  'jpg',
+      class: 'content__img',
+      alt:   'Картинка с лимонами',
+      webp:   true
+    }
+          %}
+			<div class="content__info">
+					<h1 class="content__title">Заголовок главной страницы, который может быть довольно длинным</h1>
+					<p class="content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			{% include '/components/buttons/buttons.twig' with 
+    {
+      text: 'Купить лимоны',
+      type: 'button',
+      icon: 'tick',
+      iconType: 'side',
+      round: false,
+      class: 'content__button',
+      attributes: 'data-direction="buy"'
+    } only
+%}
+		</div>
+	</section>
 
 {% endblock %}
