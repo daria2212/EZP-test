@@ -1,0 +1,48 @@
+{% set navList = [
+  {
+    text: 'Портфолио',
+    href: '#'
+  },
+  {
+     text: 'О компании',
+     href: '#'
+  },
+  {
+     text: 'Контакты',
+     href: '#'
+  },
+] %}
+
+<header class="header">
+	<div class="container row">
+		<div class="header__logo logo col-xs-5">
+			<a href="/">
+				{% include '/components/images/images.twig' with 
+    {
+      src:   'logo-eezeepeezee--eng',
+      type:  'svg',
+      class: 'logo__img logo__img--en',
+      alt:   'Logotype Eezeepeezy'
+    }
+          %}
+				{% include '/components/images/images.twig' with 
+    {
+      src:   'logo-eezeepeezee--rus',
+      type:  'svg',
+      class: 'logo__img logo__img--ru',
+      alt:   'Логотип Изипизи'
+    }
+          %}
+			</a>
+		</div>
+		<nav class="main-nav col-md-11 col-xl-6">
+			<ul class="main-nav__list">
+				{% for item in navList %}
+					<li class="main-nav__item">
+						<a href="{{item.href|default('#')}}">{{item.text}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+</header>

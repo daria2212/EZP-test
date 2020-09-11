@@ -4,90 +4,11 @@
 {% set jsCmps = [] %}
 {% set jsLibs = [] %}
 
-{% set navList = [
-  {
-    text: 'Портфолио',
-    href: '#'
-  },
-  {
-     text: 'О компании',
-     href: '#'
-  },
-  {
-     text: 'Контакты',
-     href: '#'
-  },
-] %}
+
 
 {% block content %}
 
-	<header class="header">
-		<div class="container row">
-			<div class="header__logo logo col-xs-5 col-md-5 col-xl-2">
-				<a href="/">
-					{% include '/components/images/images.twig' with 
-    {
-      src:   'logo-eezeepeezee--eng',
-      type:  'svg',
-      class: 'logo__img logo__img--en',
-      alt:   'Logotype Eezeepeezy'
-    }
-          %}
-					{% include '/components/images/images.twig' with 
-    {
-      src:   'logo-eezeepeezee--rus',
-      type:  'svg',
-      class: 'logo__img logo__img--ru',
-      alt:   'Логотип Изипизи'
-    }
-          %}
-				</a>
-			</div>
-			<nav class="main-nav col-md-11 col-xl-6">
-				<ul class="main-nav__list">
-					{% for item in navList %}
-						<li class="main-nav__item">
-							<a href="{{item.href|default('#')}}">{{item.text}}</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</nav>
-		</div>
-	</header>
-
-	<section class="content row">
-		<div class="content__img-wrapper col-xl-7">
-			{% include '/components/images/images.twig' with 
-    {
-      src:   'lemons',
-      type:  'jpg',
-      class: 'content__img',
-      alt:   'Картинка с лимонами',
-      webp:   true,
-      sourceType:   'art',
-      sourceSet:    [
-                      {bpt: 'sm', suffix: 'mob', srcset: [400]},
-                      {bpt: 'lg', suffix: 'tablet', srcset: [800]},
-                      {bpt: 'xl', suffix: 'desktop', srcset: [1200]}
-                    ],
-    }
-          %}
-		</div>
-		<div class="content__info col-xl-9">
-			<h1 class="content__title col-xs-16 col-md-12">Заголовок главной страницы, который может быть довольно длинным</h1>
-			<p class="content__text col-xs-16 col-md-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			{% include '/components/buttons/buttons.twig' with 
-    {
-      text: 'Купить лимоны',
-      type: 'button',
-      icon: 'tick',
-      iconType: 'side',
-      round: false,
-      class: 'content__button',
-      attributes: 'data-direction="buy"'
-    } only
-%}
-		</div>
-	</section>
+{% include '/components/header/header.twig' %}
+{% include '/components/main-content/main-content.twig' %}
 
 {% endblock %}

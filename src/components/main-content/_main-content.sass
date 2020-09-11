@@ -1,0 +1,41 @@
+.content
+    display: flex
+    flex-direction: column // find the class 
+    +screen(xl) 
+        flex-direction: row
+        padding: 0 4rem
+    &__info
+        margin-top: 81px
+        padding: 0 1rem
+        +screen(md)  
+            order: -1
+            padding: 0 1.5rem
+        +screen(xl)
+            position: relative
+            margin-top: 0px
+            padding: 110px 0 32px
+    &__title 
+        margin-top: 0
+        margin-bottom: 1rem
+        font-weight: normal
+        font-size: 2rem
+        line-height: 1
+        +screen(md)
+            font-size: 3rem
+    &__text
+        margin-top: 0
+        margin-bottom: 2rem
+        +screen(md)
+            font-size: .75rem
+    &__button
+        font-weight: bold; 
+        background: rgba(var(--c-brand), 1)
+        border-radius: 0px
+        +screen(md)
+            width: 224px
+        +screen(xl)
+            position: absolute
+            left: 0
+            bottom: 0
+            margin-bottom: 0
+        

@@ -1,0 +1,47 @@
+.header 
+    background: rgba(var(--c-gray-1), 1)
+    padding: 1.5rem 0
+    +screen(xl)
+        padding: 2rem 0
+        .container
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+
+.logo
+    position: relative
+    align-self: center
+    &__img--ru
+        position: absolute
+        left: 0
+        opacity: 0
+    +screen(md)
+      align-self: start
+      width: 220px
+    +screen(xl)
+      align-self: center
+      width: 150px  
+    &:hover
+        .logo__img--en
+            opacity: 0
+        .logo__img--ru 
+            opacity: 1
+
+
+.main-nav 
+    display: none
+    +screen(md)
+        display: block
+    &__list
+        display: flex
+        justify-content: space-between
+        list-style: none
+        margin: 0
+        padding: 0
+    a 
+        font-size: 1.375rem
+        color: black;
+        text-decoration: none
+        &:hover
+            color: rgba(var(--c-accent), 1)
+            transition: .4s
