@@ -1,9 +1,19 @@
 .content
     display: flex
-    flex-direction: column // find the class 
+    flex-direction: column
     +screen(xl) 
         flex-direction: row
         padding: 0 4rem
+    &__img-wrapper
+        height: 0
+        padding-bottom: 100%
+        overflow: hidden
+        object-fit: fill
+        +screen(md)
+           
+        +screen(xl)
+            height: auto
+            padding-bottom: 0
     &__info
         margin-top: 81px
         padding: 0 1rem
