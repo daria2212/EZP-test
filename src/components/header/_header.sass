@@ -21,11 +21,11 @@
         left: 0
         opacity: 0
     +screen(md)
-      align-self: start
-      width: 220px // for correct work of hover
+        align-self: start
+        width: 220px // for correct work of hover
     +screen(xl)
-      align-self: center
-      width: 150px  
+        align-self: center
+        width: 150px  
     &:hover
         .logo__img--en
             opacity: 0
@@ -36,9 +36,9 @@
 .main-nav 
     display: none
     +screen(md)
-        display: block
-    +screen(xl)
         display: flex
+        flex: 1 0 100%;
+    +screen(xl)
         align-items: center
     &__list
         display: flex
@@ -51,5 +51,5 @@
         color: black;
         text-decoration: none
         &:hover
-            color: rgba(var(--c-accent), 1)
+            color: rgba(var(--c-gray-10), 1)
             transition: .4s

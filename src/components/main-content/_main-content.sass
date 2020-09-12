@@ -8,8 +8,8 @@
         margin-right: -16px
         overflow: hidden;
         position: relative;
-        width: 110%;
-        padding-bottom: 100%;
+        width: 111%;
+        padding-bottom: 111%;
         +screen(md)
             width: 110%
             padding-bottom: 50%;
@@ -39,7 +39,10 @@
             order: -1
         +screen(xl)
             position: relative
-            margin-top: 0px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            margin: 0px
             padding: 110px 0 32px
     &__title
         margin-top: 0
@@ -54,14 +57,12 @@
         margin-bottom: 2rem
         +screen(md)
             font-size: .75rem
+        +screen(xl)
+            font-size: 1rem
     &__button
+        margin-bottom: 0
         font-weight: bold
         background: rgba(var(--c-brand), 1)
         border-radius: 0px
         +screen(md)
-            width: 224px
-        +screen(xl)
-            position: absolute
-            left: 0
-            bottom: 0
-            margin-bottom: 0
+            width: 224px  

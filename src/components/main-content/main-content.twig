@@ -11,11 +11,12 @@
     }
           %}
 		</div>
-	</div>
-	<div class="content__info col-xl-9">
-		<h1 class="content__title col-xs-16 col-md-12">Заголовок главной страницы, который может быть довольно длинным</h1>
-		<p class="content__text col-xs-16 col-md-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		{% include '/components/buttons/buttons.twig' with 
+		<div class="content__info col-xl-9">
+			<div class="content__decription">
+				<h1 class="content__title col-xs-16 col-md-12">Заголовок главной страницы, который может быть довольно длинным</h1>
+				<p class="content__text col-xs-16 col-md-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			{% include '/components/buttons/buttons.twig' with 
     {
       text: 'Купить лимоны',
       type: 'button',
@@ -26,5 +27,6 @@
       attributes: 'data-direction="buy"'
     } only
 %}
+		</div>
 	</div>
 </section>
