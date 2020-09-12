@@ -1,6 +1,7 @@
-<section class="content row">
-	<div class="content__img-wrapper col-xl-7">
-		{% include '/components/images/images.twig' with 
+<section class="content container">
+	<div class="row">
+		<div class="content__img-wrapper col-xl-7">
+			{% include '/components/images/images.twig' with 
     {
       src:   'lemons',
       type:  'jpg',
@@ -9,6 +10,7 @@
       webp:   true
     }
           %}
+		</div>
 	</div>
 	<div class="content__info col-xl-9">
 		<h1 class="content__title col-xs-16 col-md-12">Заголовок главной страницы, который может быть довольно длинным</h1>

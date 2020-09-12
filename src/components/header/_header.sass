@@ -1,23 +1,28 @@
 .header 
+    padding-top: 1.5rem
+    padding-bottom: 1.5rem
     background: rgba(var(--c-gray-1), 1)
-    padding: 1.5rem 0
+    +screen(xs)
+        .row 
+            justify-content: center
+    +screen(md)
+        .row 
+            justify-content: start
     +screen(xl)
-        padding: 2rem 0
-        .container
-            flex-direction: row
-            justify-content: space-between
-            align-items: center
+        padding-top: 2rem
+        padding-bottom: 2rem
+        .row 
+            justify-content: space-between    
 
 .logo
     position: relative
-    align-self: center
     &__img--ru
         position: absolute
         left: 0
         opacity: 0
     +screen(md)
       align-self: start
-      width: 220px
+      width: 220px // for correct work of hover
     +screen(xl)
       align-self: center
       width: 150px  
@@ -32,6 +37,9 @@
     display: none
     +screen(md)
         display: block
+    +screen(xl)
+        display: flex
+        align-items: center
     &__list
         display: flex
         justify-content: space-between

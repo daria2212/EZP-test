@@ -13,8 +13,8 @@
   },
 ] %}
 
-<header class="header">
-	<div class="container row">
+<header class="header container">
+	<div class="row">
 		<div class="header__logo logo col-xs-5">
 			<a href="/">
 				{% include '/components/images/images.twig' with 
@@ -35,8 +35,8 @@
           %}
 			</a>
 		</div>
-		<nav class="main-nav col-md-11 col-xl-6">
-			<ul class="main-nav__list">
+		<nav class="main-nav col-md-16 col-xl-6">
+			<ul class="main-nav__list col-md-11 col-xl-16">
 				{% for item in navList %}
 					<li class="main-nav__item">
 						<a href="{{item.href|default('#')}}">{{item.text}}</a>
