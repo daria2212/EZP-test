@@ -6,9 +6,11 @@
         .row 
             justify-content: center
     +screen(md)
+        height: 112px
         .row 
             justify-content: start
     +screen(xl)
+        height: auto
         padding-top: 2rem
         padding-bottom: 2rem
         .row 
@@ -38,7 +40,9 @@
     +screen(md)
         display: flex
         flex: 1 0 100%;
+        margin-top: 42px
     +screen(xl)
+        margin-top: 0
         align-items: center
     &__list
         display: flex

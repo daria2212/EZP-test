@@ -33,7 +33,7 @@
             position: relative;
             height: auto;
     &__info
-        margin-top: 81px
+        margin-top: 104px
         margin-bottom: 40px
         +screen(md)
             order: -1
@@ -65,4 +65,9 @@
         background: rgba(var(--c-brand), 1)
         border-radius: 0px
         +screen(md)
-            width: 224px  
+            width: 224px
+        +screen(xl)
+            &:hover
+                background: rgba(var(--c-accent), 1)
+                box-shadow: none
+                transition: .4s
