@@ -4,11 +4,11 @@ colors:
   base:
     white: "#ffffff"
     black: "#0b0b0b"
-  baseAdjustSteps: 10
+  baseAdjustSteps: 20
   schemes:
     default:
-      brand:       "#fff500"
-      accent:      "rgb(56, 188, 25)"
+      brand:       "#FFD62B"
+      accent:      "#00E44E"
       success:     "hsl(136, 79%, 45%)"
       warning:     "#dae21e"
       danger:      "#e80f0f"
@@ -38,11 +38,11 @@ grid:
   layoutMinWidth: 320px
   columns: 16
   gutters:
-    wrapper: "(xs: 16px, sm: 0, lg: 32px)"
-    container: false
+    wrapper: false
+    container: "(xs: 16px, md: 24px, xl: 64px)"
     row: false
-    col: "(xs: 8px, md: 16px)"
-  fixWrapperWidth: "(md, xl)"
+    col: false
+  fixWrapperWidth: false
   rotateBackMap: false
   
   
@@ -58,7 +58,7 @@ spacers:
     e: "(xs: 10)"
   defaultMarginY:
     container: false
-    row: b
+    row: false
     col: false
   defaultColPadding: false
   
@@ -67,10 +67,11 @@ spacers:
   
 typography:
   fontsInclude:
-    Roboto: 400
+    Consolas-Regular: 400
+    Consolas-Bold: 700
   fontsGoogle:
     PT Serif: "https://fonts.googleapis.com/css?family=PT+Serif&display=swap"
-  fontMain:       Roboto
+  fontMain:       Consolas-Regular
   fontStyle:      "sans-serif"
   htmlFontSize:   16px
   fontSizeBase:   1rem
